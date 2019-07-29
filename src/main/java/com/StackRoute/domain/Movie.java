@@ -19,7 +19,7 @@ public class Movie {
     public Actor getActor() {
         return actor;
     }
-
+    @Autowired
     public void setActor(Actor actor) {
         this.actor = actor;
     }

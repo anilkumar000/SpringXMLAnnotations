@@ -9,23 +9,11 @@ import org.springframework.stereotype.Component;
 @PropertySource("Actor.properties")
 public class ConfigurationClass {
 
-    @Bean
-    public Actor actor(){
-        Actor actor=new Actor();
-        return actor;
-    }
+
 
     @Bean
-    public Actor actor1(){
-        Actor actor=new Actor("Anil","male",23);
-        return actor;
-    }
-
-
-    @Bean(name = {"movie1","movie2"})
-    @Scope("prototype")
     public Movie movie(){
-        Movie movie=new Movie(actor1());
+        Movie movie=new Movie();
         return movie;
     }
 
