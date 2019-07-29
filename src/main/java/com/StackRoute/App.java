@@ -11,7 +11,10 @@ public class App
     public static void main( String[] args )
     {
         ApplicationContext applicationContext = new AnnotationConfigApplicationContext(ConfigurationClass.class);
-        Movie movie = applicationContext.getBean("movie",Movie.class);
+        Movie movie = applicationContext.getBean("movie1",Movie.class);
         System.out.println(movie);
+        Movie movieX = applicationContext.getBean("movie1",Movie.class);
+        System.out.println(movieX);
+        System.out.println(movie==movieX);
     }
 }

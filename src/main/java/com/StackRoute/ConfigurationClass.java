@@ -15,10 +15,17 @@ public class ConfigurationClass {
         return actor;
     }
 
-
     @Bean
+    public Actor actor1(){
+        Actor actor=new Actor("Anil","male",23);
+        return actor;
+    }
+
+
+    @Bean(name = "movie1")
+    @Scope("prototype")
     public Movie movie(){
-        Movie movie=new Movie(actor());
+        Movie movie=new Movie(actor1());
         return movie;
     }
 
