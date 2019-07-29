@@ -22,7 +22,7 @@ public class ConfigurationClass {
     }
 
 
-    @Bean(name = "movie1")
+    @Bean(name = {"movie1","movie2"})
     @Scope("prototype")
     public Movie movie(){
         Movie movie=new Movie(actor1());
