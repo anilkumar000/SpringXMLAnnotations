@@ -14,10 +14,11 @@ public class App
     {
 
         ConfigurableApplicationContext applicationContext = new AnnotationConfigApplicationContext(ConfigurationClass.class);
-//
+
         Movie movie = applicationContext.getBean("movie",Movie.class);
         System.out.println(movie);
         applicationContext.close();
+
 
     }
 }

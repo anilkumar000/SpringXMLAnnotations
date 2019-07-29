@@ -20,4 +20,10 @@ public class ConfigurationClass {
         return beanLifeCycleDemo;
     }
 
+    @Bean(name="postProcessing")
+    public BeanPostProcessorDemo beanPostProcessorDemo(){
+        BeanPostProcessorDemo beanPostProcessorDemo=new BeanPostProcessorDemo();
+        return beanPostProcessorDemo;
+    }
+
 }
